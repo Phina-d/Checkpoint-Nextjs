@@ -4,10 +4,8 @@ import { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 export default function DarkModeToggle() {
-  // État local pour savoir si le thème actuel est sombre
   const [isDark, setIsDark] = useState(false);
 
-  // Au chargement initial, on applique le thème en fonction des préférences ou du localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -20,7 +18,6 @@ export default function DarkModeToggle() {
     }
   }, []);
 
-  // Fonction pour basculer entre les thèmes
   const toggleTheme = () => {
     const html = document.documentElement;
     if (isDark) {

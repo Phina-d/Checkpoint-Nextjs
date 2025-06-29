@@ -1,57 +1,36 @@
-# Mon Portfolio - Next.js & Tailwind CSS
-Bienvenue sur mon portfolio professionnel créé avec **Next.js** et **Tailwind CSS**.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Description
+## Getting Started
 
-Ce projet est un site web portfolio personnel créé avec Next.js et Tailwind CSS.  
-Il met en valeur mes compétences, mes projets et mes coordonnées.  
-Le site est responsive, avec un mode sombre, des animations, et intègre le routage côté serveur de Next.js.
+First, run the development server:
 
-## Fonctionnalités
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- Pages : Accueil, À propos, Projets, Contact  
-- Affichage de projets avec images, descriptions, technologies utilisées  
-- Filtrage des projets par technologie  
-- Pagination sur la liste des projets  
-- Mode sombre (dark mode) avec toggle  
-- Formulaire de contact stylisé  
-- Animations à l’apparition (scroll) avec AOS  
-- Responsive design avec Tailwind CSS  
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Technologies utilisées
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-- Next.js 15.x  
-- React  
-- Tailwind CSS  
-- TypeScript   
-- React Icons  
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Installation
+## Learn More
 
-npx create-next-app@latest mon-portfolio
+To learn more about Next.js, take a look at the following resources:
 
-## Déploiement
-Le projet est prêt à être déployé sur Vercel (ou toute autre plateforme compatible Next.js).
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Structure du projet
-/src
-├─ app/
-│ ├─ page.tsx → Page d’accueil
-│ ├─ about/page.tsx → Page À propos
-│ ├─ projects/page.tsx → Projets
-│ ├─ contact/page.tsx → Contact
-├─ components/ → Navbar, Footer, DarkModeToggle
-├─ images/ → Images des projets
-└─ styles/
-└─ globals.css
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Personnalisation
-Modifier les projets dans /src/app/projects/page.tsx
+## Deploy on Vercel
 
-Modifier les compétences dans /src/app/about/page.tsx
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Modifier les styles Tailwind dans tailwind.config.js
-
-## Contribution
-Les contributions sont les bienvenues !
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

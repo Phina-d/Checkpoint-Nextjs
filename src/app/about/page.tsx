@@ -22,13 +22,13 @@ export default function About() {
 
       <section className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
         <p>
-          Bonjour ! Je suis une développeuse passionnée spécialisée dans le développement web moderne. J&apos;aime créer des applications élégantes, performantes et accessibles.
+          Bonjour ! Je suis une développeuse passionnée spécialisée dans le développement web moderne. J'aime créer des applications élégantes, performantes et accessibles.
         </p>
         <p>
-          Débutante dans les technologies comme React, Next.js, et Tailwind CSS, j&apos;aime travailler sur des projets qui ont un vrai impact.
+          Débutante dans les technologies comme React, Next.js, et Tailwind CSS, j'aime travailler sur des projets qui ont un vrai impact.
         </p>
         <p>
-          En dehors du code, j&apos;aime apprendre de nouvelles technologies, contribuer à des projets open source, et partager mes connaissances avec la communauté.
+          En dehors du code, j'aime apprendre de nouvelles technologies, contribuer à des projets open source, et partager mes connaissances avec la communauté.
         </p>
       </section>
 
@@ -49,7 +49,7 @@ export default function About() {
           Me contacter
         </h2>
         <p className="text-gray-700 dark:text-gray-300">
-          N&apos;hésitez pas à m&apos;envoyer un message via la page{" "}
+          N’hésitez pas à m’envoyer un message via la page{" "}
           <a href="/contact" className="text-blue-600 hover:underline dark:text-blue-400">
             Contact
           </a>
