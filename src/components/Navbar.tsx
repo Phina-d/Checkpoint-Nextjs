@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link"; // <-- Import de Link
 import DarkModeToggle from "./DarkModeToggle";
 
 export default function Navbar() {
@@ -45,18 +46,18 @@ export default function Navbar() {
           className={`flex-col sm:flex-row sm:flex space-y-4 sm:space-y-0 sm:space-x-6 items-center absolute sm:static top-full left-0 right-0 bg-white dark:bg-gray-900 sm:bg-transparent sm:dark:bg-transparent p-4 sm:p-0 transition-transform duration-300 ease-in-out
           ${isOpen ? "flex" : "hidden sm:flex"}`}
         >
-          <a href="/" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>
+          <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-500">
             Accueil
-          </a>
-          <a href="/about" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>
+          </Link>
+          <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-blue-500">
             À propos
-          </a>
-          <a href="/projects" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>
+          </Link>
+          <Link href="/projects" onClick={() => setIsOpen(false)} className="hover:text-blue-500">
             Projets
-          </a>
-          <a href="/contact" className="hover:text-blue-500" onClick={() => setIsOpen(false)}>
+          </Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-blue-500">
             Contact
-          </a>
+          </Link>
           <DarkModeToggle />
         </div>
       </div>
