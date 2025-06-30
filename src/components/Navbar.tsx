@@ -1,22 +1,27 @@
-"use client";
+"use client"; // Indique que ce composant est rendu côté client (requis pour utiliser useState, etc.)
 
-import { useState } from "react";
+import { useState } from "react"; // Hook pour gérer l'état du menu burger
 import Link from "next/link"; // <-- Import de Link
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle"; // Composant personnalisé pour activer/désactiver le mode sombre
 
+// Composant de la barre de navigation principale
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-white dark:bg-gray-900 text-black dark:text-white shadow-md p-4 sticky top-0 z-50">
+      {/* Conteneur principal centré avec espacement entre titre et menu */}
       <div className="max-w-7xl mx-auto flex justify-between items-center">
+        {/* Titre du site */}
         <h1 className="text-xl font-bold">Mon Portfolio</h1>
 
+        {/* Bouton menu hamburger pour petits écrans */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="sm:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           aria-label="Toggle menu"
         >
+          {/* Icône SVG (menu ou croix) selon l'état */}
           <svg
             className="h-6 w-6"
             fill="none"
@@ -25,6 +30,7 @@ export default function Navbar() {
             xmlns="http://www.w3.org/2000/svg"
           >
             {isOpen ? (
+              // Icône de fermeture (croix)
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -32,6 +38,7 @@ export default function Navbar() {
                 d="M6 18L18 6M6 6l12 12"
               />
             ) : (
+              // Icône du menu burger
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -42,10 +49,12 @@ export default function Navbar() {
           </svg>
         </button>
 
+        {/* Menu de navigation (responsive) */}
         <div
           className={`flex-col sm:flex-row sm:flex space-y-4 sm:space-y-0 sm:space-x-6 items-center absolute sm:static top-full left-0 right-0 bg-white dark:bg-gray-900 sm:bg-transparent sm:dark:bg-transparent p-4 sm:p-0 transition-transform duration-300 ease-in-out
           ${isOpen ? "flex" : "hidden sm:flex"}`}
         >
+          {/* Liens de navigation. Ferment le menu mobile au clic */}
           <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-500">
             Accueil
           </Link>

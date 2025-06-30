@@ -1,9 +1,10 @@
-'use client';
+'use client'; // Directive obligatoire dans Next.js App Router pour activer le rendu côté client (useState, etc.)
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { useState } from 'react'; // Hook React pour gérer l'état local
+import Image from 'next/image';  // Composant Image optimisé de Next.js
+import { motion } from 'framer-motion'; // Bibliothèque pour les animations
 
+// Liste des projets à afficher
 const projects = [
   {
     title: 'Portfolio Développeur',
@@ -45,6 +46,7 @@ const projects = [
   },
 ];
 
+// Extraction unique de toutes les technologies utilisées dans les projets
 const allTechnologies = Array.from(
   new Set(projects.flatMap(p => p.technologies || []))
 );
@@ -53,8 +55,9 @@ export default function ProjectsPage() {
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const itemsPerPage = 3;
+  const itemsPerPage = 3; // Nombre de projets à afficher par page
 
+  // Filtrage des projets selon la technologie sélectionnée (ou tous si aucun filtre)
   const filteredProjects = selectedTech
     ? projects.filter(p => p.technologies?.includes(selectedTech))
     : projects;
@@ -79,7 +82,7 @@ export default function ProjectsPage() {
             key={tech}
             onClick={() => {
               setSelectedTech(tech === selectedTech ? null : tech);
-              setCurrentPage(1); // Reset to page 1 on filter change
+              setCurrentPage(1); // Revenir à la première page lors du filtrage
             }}
             className={`px-4 py-1 text-sm rounded-full border transition-all ${
               selectedTech === tech
@@ -103,6 +106,7 @@ export default function ProjectsPage() {
             transition={{ duration: 0.4, delay: index * 0.1 }}
             className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition hover:scale-[1.02]"
           >
+            {/* Image du projet */}
             <Image
               src={project.image}
               alt={project.title}
@@ -116,6 +120,7 @@ export default function ProjectsPage() {
               </h2>
               <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
 
+            {/* Technologies utilisées */}
               {project.technologies && (
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.technologies.map((tech, i) => (
@@ -129,6 +134,7 @@ export default function ProjectsPage() {
                 </div>
               )}
 
+         {/* Liens vers GitHub et démo */}
               <div className="flex gap-4 mt-4 text-sm">
                 {project.github && (
                   <a
