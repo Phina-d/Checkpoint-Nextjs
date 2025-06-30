@@ -10,8 +10,8 @@ const projects = [
     description: 'Un portfolio pour présenter mes projets et compétences.',
     image: '/images/portfolio.jpg',
     technologies: ['Next.js', 'Tailwind CSS', 'React'],
-    github: 'https://github.com/Phina-d/Projet-portfolio-Next.js.git',
-    demo: 'https://Projet-portfolio-Next.js.vercel.app',
+    github: 'https://github.com/Phina-d/Checkpoint-Nextjs.git',
+    demo: ' https://checkpoint-nextjs-git-master-phina-ds-projects.vercel.app/',
   },
   {
     title: 'Bootstrap Galerie',
